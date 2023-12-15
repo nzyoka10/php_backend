@@ -25,11 +25,11 @@
                     </tr>
                     <tr>
                         <td>Oil</td>
-                        <td><input type="number" name="oilQuantity" value="0" min="0"></td>
+                        <td><input type="number" name="oilqty" value="0" min="0"></td>
                     </tr>
                     <tr>
                         <td>Spark Plugs</td>
-                        <td><input type="number" name="sparkPlugsQuantity" value="0" min="0"></td>
+                        <td><input type="number" name="sparkqty" value="0" min="0"></td>
                     </tr>
                 </tbody>
             </table>
