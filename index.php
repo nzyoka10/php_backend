@@ -15,6 +15,10 @@
  * 
  */
 echo "Hello World!";
+
+echo "<p>Order processed at ";
+echo date('H : i, j : s F Y');
+echo "</p>"
 ?>
 
 </body>
