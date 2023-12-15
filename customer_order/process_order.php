@@ -34,7 +34,11 @@
         # echo $tireqty.' tires <br/>';  --> wrong output approach
         # recommended below
         echo '<p>Your order is as follows: </p>';
-        echo htmlspecialchars($tireqty).'<strong>Tires: <br/></strong>';
+        echo '<strong>No. of Tires: </strong>'.htmlspecialchars($tireqty);
+        echo '<br/>';
+        echo '<strong>Bottle of Oil: </strong>'.htmlspecialchars($oilqty);
+        echo '<br/>';
+        echo '<strong>Spark plugs: </strong>'.htmlspecialchars($sparkqty);
 
     ?>
 
