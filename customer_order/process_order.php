@@ -7,9 +7,9 @@
     <link rel="stylesheet"href="./styles.css">
     <style>
         #main{
-            /* border: 3px solid red; */
+            /* border: 3px solid red; 
             padding: 18px;
-            margin: 28px;
+            margin: 28px; */
         }
     </style>
 </head>
@@ -31,7 +31,10 @@
         $sparkqty = $_POST['sparkqty'];
 
         # output Tire value
-        echo $tireqty.' tires <br/>';
+        # echo $tireqty.' tires <br/>';  --> wrong output approach
+        # recommended below
+        echo '<p>Your order is as follows: </p>';
+        echo htmlspecialchars($tireqty).'<strong>Tires: <br/></strong>';
 
     ?>
 

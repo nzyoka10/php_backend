@@ -68,5 +68,6 @@ input[type="submit"]:hover {
 /* processing form styles */
 #main{
     border: 3px solid #f45115;
-    
+    padding: 18px;
+    margin: 28px;
 }
