@@ -18,7 +18,17 @@ echo "Hello World!";
 
 echo "<p>Order processed at ";
 echo date('H : i, j : s F Y');
-echo "</p>"
+echo "</p>";
+
+# string concatenation or Combining
+echo '<p><strong>Example below <i>string concatenation</i>:</strong></p>';
+$x = "Hello";
+$y = "PHP World!";
+$z = $x. " " .$y;
+echo $z;
+
+
+
 ?>
 
 </body>
