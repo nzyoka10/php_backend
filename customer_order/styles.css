@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@500&family=Kalnia&family=Poppins:wght@200&display=swap');
+
+body {
+    font-family: 'Afacad', sans-serif;
+    font-family: 'Kalnia', serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    font-size: 16px;
+}
+
+section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #054207;
+    font-family: 'Kalnia', serif;
+    font-size: 50px;
+    margin-bottom: 20px;
+   text-transform: capitalize;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 2px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #5ea160;
+    color: white;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 0.5em;
+}
+
+input[type="number"] {
+    width: 90px;
+    text-align: center;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #054207;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
