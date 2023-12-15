@@ -13,7 +13,9 @@
 
     <?php 
         # process the customers order table here....
-        echo '<p>Order Processed!</p>';
+        echo "<p>Order processed at ".date('H:i, j : s F Y')." </p>";
     ?>
+
+    
 </body>
 </html>

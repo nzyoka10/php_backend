@@ -1,3 +1,12 @@
+<?php 
+
+    /**
+     * Author: Eric Nzyoka
+     * Last modified: December 2023
+     * this script takes customer order and process it
+     */
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
