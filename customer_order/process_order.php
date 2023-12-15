@@ -7,7 +7,7 @@
     <link rel="stylesheet"href="./styles.css">
     <style>
         #main{
-            border: 3px;
+            /* border: 3px solid red; */
             padding: 18px;
             margin: 28px;
         }
