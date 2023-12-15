@@ -63,3 +63,10 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #45a049;
 }
+
+
+/* processing form styles */
+#main{
+    border: 3px solid #f45115;
+    
+}
