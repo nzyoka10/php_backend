@@ -22,14 +22,16 @@
 
 
         <?php 
+
+            # variable names decralation
+            $tireqty = $_POST['tireqty'];
+            $oilqty = $_POST['oilqty'];
+            $sparkqty = $_POST['sparkqty'];
+
         # process the customers order table here....
         echo "<p>Order processed at ".date('H:i, j : s F Y')." </p>";
 
-        # variable names decralation
-        $tireqty = $_POST['tireqty'];
-        $oilqty = $_POST['oilqty'];
-        $sparkqty = $_POST['sparkqty'];
-
+        
         # output Tire value
         # echo $tireqty.' tires <br/>';  --> wrong output approach
         # recommended below

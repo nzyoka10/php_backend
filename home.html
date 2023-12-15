@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animated Greeting</title>
+  
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+      background: linear-gradient(45deg, #FFD700, #FFA500);
+      animation: gradientAnimation 10s infinite alternate;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #fff;
+      text-align: center;
+      animation: nameAnimation 2s ease-in-out infinite;
+    }
+
+    @keyframes nameAnimation {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Search Icon -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col text-right mt-3 mr-3">
+        <i class="fas fa-search fa-lg"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Greeting Container -->
+  <div class="container">
+    <h1>Hello, <span id="animatedName">
+        <br>Your Name</span>!</h1>
+  </div>
+
+  <!-- Bootstrap and Font Awesome CDN -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
