@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html>
+    <head>
+    <style>
+        *{
+            padding: 7px;
+            margin: 12px;
+        }
+        body{
+            border: 3px solid #f0f0f0f0; 
+            padding: 20px;
+        }
+    </style>
+    </head>
 <body>
 
 <h1>My first PHP page</h1>
@@ -26,6 +38,13 @@ $x = "Hello";
 $y = "PHP World!";
 $z = $x. " " .$y;
 echo $z;
+
+echo '<br/>';
+            # phpinfo();
+
+            echo'<p><b>Assignment operator</b><br/> $b = 6 + ($a = 5) ?</p>';
+            $b = 6 + ($a = 5);
+            echo $b;
 
 
 
