@@ -6,6 +6,20 @@
     <title>Bob's Auto Parts - Order Results</title>
     <link rel="stylesheet"href="./styles.css">
     <style>
+
+        body{
+            font-size: 15px;
+            
+        }
+
+        p{
+            font-weight: 400;
+        }
+
+        em{
+            color: green;
+            text-decoration: none;
+        }
         #main{
             /* border: 3px solid red; 
             padding: 18px;
@@ -24,23 +38,65 @@
         <?php 
 
             # variable names decralation
+            # you can also assign variable value to variable
             $tireqty = $_POST['tireqty'];
             $oilqty = $_POST['oilqty'];
             $sparkqty = $_POST['sparkqty'];
 
-        # process the customers order table here....
-        echo "<p>Order processed at ".date('H:i, j : s F Y')." </p>";
+            # $total_amount = 0.00;   
+            # $totalqty = 0;         
+            # $totalamount = (float)$totalqty;
 
+            echo '<p  >Your order is as follows: </p>';
+            echo '<p>No. of Tires:  '.htmlspecialchars($tireqty).'</p>';
+            echo '<p>Bottle of Oil: '.htmlspecialchars($oilqty).'</p>';
+            echo '<p>Spark plugs:  '.htmlspecialchars($sparkqty).'</p>';
+
+
+            $totalqty = 0;
+            $totalqty = $tireqty + $oilqty + $sparkqty;
+            
+            echo 
+            "<p>Items ordered: ".$totalqty."<br />";
+                        $totalamount = 0.00;
+
+                        # Price list
+                        define('TIREPRICE', 100);
+                        define('OILPRICE', 10);
+                        define('SPARKPRICE', 4);
+
+                        $totalamount = $tireqty * TIREPRICE
+                                               + $oilqty * OILPRICE
+                                               + $sparkqty * SPARKPRICE;
+                                            
+                        echo "Subtotal: <b><em>Kes:. </em></b>".number_format($totalamount, 2)."<br />";
+                        
+                        $taxrate = 0.10; # assume local tax is 10%
+                        $totalamount = $totalamount * (1 + $taxrate);
+                        echo "Total including tax: <b>Kes:. </b>".number_format($totalamount, 2).
+                        
+            "</p>";
+
+
+            
+
+            # echo TIREPRICE;
+
+
+
+        /**  
+         *  output Tire value
+         *  echo $tireqty.' tires <br/>';  --> wrong output approach
+         *  recommended below
+         * 
+        */
         
-        # output Tire value
-        # echo $tireqty.' tires <br/>';  --> wrong output approach
-        # recommended below
-        echo '<p>Your order is as follows: </p>';
-        echo '<strong>No. of Tires: </strong>'.htmlspecialchars($tireqty);
-        echo '<br/>';
-        echo '<strong>Bottle of Oil: </strong>'.htmlspecialchars($oilqty);
-        echo '<br/>';
-        echo '<strong>Spark plugs: </strong>'.htmlspecialchars($sparkqty);
+
+
+        # footer 
+        echo '<hr/>';
+        echo "<p>Order processed: <br/> By: <b>Bob Kenya! <br/>";
+        echo "<span>At: </span></b>".date('H:i, j : s F Y')." </p>";
 
     ?>
 
