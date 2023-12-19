@@ -24,7 +24,11 @@
      * 
      */
 
-        echo '<p>Order processed at '.date('H : i, js F Y'). '</p>';
+        date_default_timezone_set('Africa/Nairobi');
+        $date = date('d-M-Y, H :i');
+        # echo $date;
+
+        echo '<p style="color: green;">Order processed at, '.$date. '</p>';
 
         # variable names
         $tireqty = $_POST['tireqty'];
@@ -36,13 +40,50 @@
         echo htmlspecialchars($oilqty).' <b>Bottles of oil</b><br/>';
         echo htmlspecialchars($sparkqty).' <b>Spark plugs</b>';
 
+        
         $totalqty = 0;
-        $total_amount = (float)$totalqty;
+        $totalqty = $tireqty + $oilqty + $sparkqty;
 
-        # declaring pricing constants
-        define('TIREPRICE', 100);
-        define('OILPRICCE', 10);
-        define('SPARKPRICE', 4);
+        if ($totalqty == 0) 
+        {
+            echo '<p style="color: red;">';
+            echo 'You did not order anything on the previous page!';
+            echo '</p>';
+        }
+
+        echo "<p>Items Ordered: ".$totalqty."<br/>";           
+
+            $total_amount = 0.00;
+
+            # declaring pricing constants
+            define('TIREPRICE', 100);
+            define('OILPRICCE', 10);
+            define('SPARKPRICE', 4);
+
+            # $totalqty = 0;
+            $total_amount = $tireqty * TIREPRICE
+                        + $oilqty * OILPRICCE
+                        + $sparkqty * SPARKPRICE;
+
+            echo "Subtotal: Kes:. ".number_format($total_amount, 2)."<br/>";
+
+            $taxrate = 0.10; # Assume local tax is 10%
+            $total_amount = $total_amount * (1 + $taxrate);
+            echo "Total amount (inc VAT): Kes:. ". number_format($total_amount, 2) . "<br />";
+
+            /**
+            * echo 'isset($tireqty): '.isset($tireqty).'<br/>';
+            * echo 'isset($nothere): '.isset($nothere).'<br/>';
+            * echo 'isset($oilqty): '.isset($oilqty).'<br/>';
+            */
+        
+            "</p>";
+        
+        
+
+        
+
+        
 
 
 
