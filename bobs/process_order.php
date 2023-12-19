@@ -34,6 +34,7 @@
         $tireqty = $_POST['tireqty'];
         $oilqty = $_POST['oilqty'];
         $sparkqty = $_POST['sparkqty'];
+        $find = $_POST['find'];
 
         echo '<p>Your order is as follows: </p>';
         
@@ -61,8 +62,47 @@
                 echo htmlspecialchars($sparkqty).' <b>Spark plugs</b>';
         }
       
-        
-        
+        # calculate discount
+        if($tireqty < 10)
+        {
+            $discount = 0;
+        }
+        elseif(($tireqty >= 10) && ($tireqty <= 49))
+        {
+            $discount = 5;
+        }
+        elseif(($tireqty >= 50) && ($tireqty <= 99))
+        {
+            $discount = 10;
+        }
+        elseif($tireqty >= 100)
+        {
+            $discount = 15;
+        }
+
+        # switch case to get how customer caome to bobs
+        switch($find)
+        {
+            case "a":
+                echo "<p>regular customer</p>";
+                break;
+
+            case "b":
+                echo "<p>Word of Mouth</p>";
+                break;
+            
+            case "c":
+                echo "<p>Reffered by Tv advert</p>";
+                break;
+
+            case "d":
+                echo "<p>Internet Search</p>";
+                break;
+
+            default:
+            echo "<p>We do not know how this customer found us.</p>";
+            break;
+        }
 
 
         echo "<p>Items Ordered: ".$totalqty."<br/>";           

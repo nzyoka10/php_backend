@@ -17,7 +17,7 @@
     <form action="process_order.php" method="POST">
 
         <!-- Order table -->
-        <table style="border: 1px solid #e0ffff;">
+        <table style="border: 1px solid #e0ffff; width: 78%;">
 
             <tr style="background: #ccc;">
                 <td style="width: 150px; text-align: center;">Item</td>
@@ -37,6 +37,18 @@
             <tr>
                 <td>Spark Plugs</td>
                 <td><input type="text" name="sparkqty" size="3" maxlength="3"></td>
+            </tr>
+
+            <tr>
+                <td>How did you find Bob's?</td>
+                <td>
+                    <select name="find">
+                        <option value="a">I'm a regular customer</option>
+                        <option value="b">Word of Mouth</option>
+                        <option value="c">Tv advertising</option>
+                        <option value="d">Internet Search</option>
+                    </select>
+                </td>
             </tr>
 
             <td colspan="2" style="text-align: center;">
