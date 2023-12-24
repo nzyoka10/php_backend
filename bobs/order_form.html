@@ -13,15 +13,17 @@
 </head>
 <body>
 
+    <h3>Bob's Auto Parts </h3>
+
 
     <form action="process_order.php" method="POST">
 
         <!-- Order table -->
-        <table style="border: 1px solid #e0ffff; width: 78%;">
+        <table style="border: 1px solid #bb9c66; padding: 2px; width: 40%;">
 
             <tr style="background: #ccc;">
-                <td style="width: 150px; text-align: center;">Item</td>
-                <td style="width: 16px; text-align: center;">Quantity</td>
+                <td style="width: 5%; text-align: center;">Item</td>
+                <td style="width: 6%; text-align: center;">Quantity</td>
             </tr>
 
             <tr>
@@ -40,9 +42,15 @@
             </tr>
 
             <tr>
+                <td>Shipping Address</td>
+                <td><input type="text" name="address" size="3"></td>
+            </tr>
+
+            <tr>
                 <td>How did you find Bob's?</td>
                 <td>
-                    <select name="find">
+                    <select name="find" disabled>
+                        <option value="#">Choose Option</option>
                         <option value="a">I'm a regular customer</option>
                         <option value="b">Word of Mouth</option>
                         <option value="c">Tv advertising</option>
