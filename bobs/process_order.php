@@ -1,23 +1,23 @@
 <?php
 
-/**
- *  * Author: Eric Nzyoka
- *! Last modified: December 2023
- ** This script processes the customer orders.
- *
- *ToDo: Code below
- *
- */
+    /**
+     *  * Author: Eric Nzyoka
+     *! Last modified: December 2023
+    ** This script processes the customer orders.
+    *
+    *ToDo: Code below
+    *
+    */
 
-# program variable names
-$tireqty = ((int) $_POST['tireqty']);
-$oilqty = ((int) $_POST['oilqty']);
-$sparkqty = ((int) $_POST['sparkqty']);
-$address = preg_replace('/ \t | \R/', '', $_POST['address']);
-$document_root = $_SERVER['DOCUMENT_ROOT'];
+    # program variable names
+    $tireqty = ((int) $_POST['tireqty']);
+    $oilqty = ((int) $_POST['oilqty']);
+    $sparkqty = ((int) $_POST['sparkqty']);
+    $address = preg_replace('/ \t | \R/', '', $_POST['address']);
+    $document_root = $_SERVER['DOCUMENT_ROOT'];
 
-date_default_timezone_set('Africa/Nairobi');
-$date = date('H:i, js F Y');
+    date_default_timezone_set('Africa/Nairobi');
+    $date = date('H:i, js F Y');
 
 ?>
 
@@ -117,7 +117,7 @@ $date = date('H:i, js F Y');
             @$fp = fopen("$document_root/./orders/orders.txt", 'ab');
 
             if (!$fp) {
-            echo "<p>
+            echo "<p style='color: red;'>
                     <strong>
                         Your order could not be processed at this time.
                         Please try later!
